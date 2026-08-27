@@ -205,6 +205,19 @@ The small difference between training and test errors indicates no strong eviden
 
 ---
 
+## 📁 Project Structure
+
+```text
+week4-logistics-predictive-modeling/
+│
+├── README.md
+├── app.py
+├── requirements.txt
+└── delivery_time_prediction_model.pkl
+```
+
+---
+
 ## 🚀 Future Scope
 -Real-time GPS and shipment tracking
 -Traffic and weather integration
@@ -228,16 +241,4 @@ The model demonstrated consistent cross-validation performance, with 90.77% of p
 Compared with a simple mean baseline, the proposed model reduced MAE by 19.9% and RMSE by 20.4%.
 
 This demonstrates the potential of machine learning for practical delivery-time estimation and logistics decision support.
-
----
-
-## 📁 Project Structure
-
-```text
-week4-logistics-predictive-modeling/
-│
-├── README.md
-├── app.py
-├── requirements.txt
-└── delivery_time_prediction_model.pkl
 
