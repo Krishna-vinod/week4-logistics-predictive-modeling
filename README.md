@@ -20,7 +20,7 @@ After comparison, **Linear Regression** was selected as the final model.
 
 - Predict actual delivery time for shipments.
 - Identify factors influencing delivery duration.
-- Compare multiple regression algorithms.
+- Compare multiple machine learning regression algorithms.
 - Validate the selected model using 5-fold cross-validation.
 - Analyze prediction errors and model generalization.
 - Build a reusable prediction model for new shipments.
@@ -75,7 +75,7 @@ All preprocessing and prediction steps were combined into a Scikit-learn Pipelin
 | Gradient Boosting | 0.999 | 1.227 | 0.341 |
 | Random Forest | 1.015 | 1.247 | 0.319 |
 
-### Best Model
+### 🏆 Best Model
 
 **Linear Regression**
 
@@ -101,9 +101,9 @@ The small standard deviations indicate consistent performance across the five fo
 | Test MAE | **0.982 days** |
 | Test RMSE | **1.204 days** |
 | Test R² | **0.365** |
-| Within ±1 day | **62.59%** |
-| Within ±2 days | **90.77%** |
-| Within ±3 days | **99.00%** |
+| Predictions within ±1 day | **62.59%** |
+| Predictions within ±2 days | **90.77%** |
+| Predictions within ±3 days | **99.00%** |
 
 The model was evaluated on **401 unseen test samples**.
 
@@ -119,12 +119,10 @@ A simple baseline model predicting the mean delivery time achieved:
 | RMSE | 1.512 | **1.204** |
 | R² | -0.001 | **0.365** |
 
-The proposed model achieved:
+Compared with the baseline, the proposed model achieved:
 
 - **19.9% lower MAE**
 - **20.4% lower RMSE**
-
-compared with the baseline.
 
 ---
 
@@ -140,11 +138,9 @@ Residual analysis produced the following results:
 
 ### Prediction Accuracy
 
-**62.59%** of predictions were within ±1 day.
-
-**90.77%** were within ±2 days.
-
-**99.00%** were within ±3 days.
+- **62.59%** of predictions were within ±1 day.
+- **90.77%** were within ±2 days.
+- **99.00%** were within ±3 days.
 
 ---
 
@@ -168,12 +164,53 @@ The strongest regression coefficients included:
 
 For a new shipment with:
 
+| Input | Value |
+|---|---|
+| Distance | 500 km |
+| Weight | 10 kg |
+| Quantity | 3 |
+| Scheduled Days | 4 |
+| Shipping Mode | First Class |
+| Region | USCA |
+| Product Category | Technology |
+| Priority | High |
+
+### 🚚 Predicted Delivery Time
+
+**4.77 days**
+
+---
+
+## 🧠 Generalization Analysis
+
+| Metric | Training | Test |
+|---|---:|---:|
+| MAE | 0.964 days | 0.982 days |
+| RMSE | 1.169 days | 1.204 days |
+| R² | 0.353 | 0.365 |
+
+The small difference between training and test errors indicates no strong evidence of overfitting.
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Joblib
+- Streamlit
+
+---
+
+## 📁 Project Structure
+
 ```text
-Distance: 500 km
-Weight: 10 kg
-Quantity: 3
-Scheduled Days: 4
-Shipping Mode: First Class
-Region: USCA
-Product Category: Technology
-Priority: High
+week4-logistics-predictive-modeling/
+│
+├── README.md
+├── app.py
+├── requirements.txt
+└── delivery_time_prediction_model.pkl
