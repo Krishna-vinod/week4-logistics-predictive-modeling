@@ -214,3 +214,29 @@ week4-logistics-predictive-modeling/
 ├── app.py
 ├── requirements.txt
 └── delivery_time_prediction_model.pkl
+
+---
+
+## 🚀 Future Scope
+-Real-time GPS and shipment tracking
+-Traffic and weather integration
+-Carrier performance analysis
+-Holiday and seasonal effects
+-Real-time prediction API
+-Interactive logistics dashboard
+-Advanced ensemble and deep-learning models
+-Automatic delay alerts
+
+---
+
+## 🏁 Conclusion
+
+The project successfully developed a machine learning-based delivery-time prediction system.
+
+Among the evaluated models, Linear Regression performed best, achieving an MAE of 0.982 days, RMSE of 1.204 days, and R² of 0.365.
+
+The model demonstrated consistent cross-validation performance, with 90.77% of predictions within ±2 days of the actual delivery time.
+
+Compared with a simple mean baseline, the proposed model reduced MAE by 19.9% and RMSE by 20.4%.
+
+This demonstrates the potential of machine learning for practical delivery-time estimation and logistics decision support.
